@@ -11,7 +11,7 @@ const Cart = () => {
   const { id } = useParams();
   const [inddata, setindData] = useState([]);
 
-const history = useNavigate();
+const navigate = useNavigate();
 
   const dispatch =  useDispatch();
 
@@ -49,7 +49,7 @@ const history = useNavigate();
     } else {
         console.log("cart add ho gya hain");
         // setAccount(data1)
-        history.push("/buynow");
+        navigate(`/buynow`);
     }
 }
 
