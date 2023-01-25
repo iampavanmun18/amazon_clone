@@ -1,0 +1,37 @@
+import React from "react";
+import Carousel from "react-material-ui-carousel";
+import './Banner.css'
+
+const Banner = () => {
+  const data = [
+    "https://rukminim1.flixcart.com/flap/1680/280/image/1defb861e409319b.jpg?q=50",
+    " https://rukminim1.flixcart.com/flap/1680/280/image/685712c6cefb3c02.jpg?q=50",
+    "https://rukminim1.flixcart.com/flap/1680/280/image/8d4150cc4f3f967d.jpg?q=50",
+    "https://rukminim1.flixcart.com/flap/1680/280/image/685712c6cefb3c02.jpg?q=50",
+  ];
+
+  return (
+    <Carousel
+      className="carasousel"
+      autoPlay={true}
+      animation="slide"
+      indicators={false}
+      navButtonsAlwaysVisible={true}
+      cycleNavigation={true}
+      navButtonsProps={{
+        style: {
+          backgroundColor: "#fff",
+          color: "#494949",
+          borderRadius: 0,
+          marginTop:-22,
+        },
+      }}
+    >
+      {data.map((item, i) => (
+        <img src={item} className="banner_image" />
+      ))}
+    </Carousel>
+  );
+};
+
+export default Banner;
